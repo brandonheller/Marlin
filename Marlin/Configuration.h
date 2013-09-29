@@ -329,7 +329,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define Y_MAX_POS 80
 #define Y_MIN_POS -80
 #define Z_MAX_POS MANUAL_Z_HOME_POS
-#define Z_MIN_POS -10
+// Large Z_MIN_POS enables a large Z offset when using a dial test indicator to calibrate.
+#define Z_MIN_POS -50
 
 #define X_MAX_LENGTH (X_MAX_POS - X_MIN_POS)
 #define Y_MAX_LENGTH (Y_MAX_POS - Y_MIN_POS)
