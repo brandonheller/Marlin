@@ -83,7 +83,7 @@
 #define DELTA_SEGMENTS_PER_SECOND 150
 
 // Center-to-center distance of the holes in the diagonal push rods.
-#define DELTA_DIAGONAL_ROD 288.0 // mm
+#define DELTA_DIAGONAL_ROD 288.75 // mm
 
 // Horizontal offset from middle of printer to smooth rod center.
 #define DELTA_SMOOTH_ROD_OFFSET 180.2 // mm
@@ -330,7 +330,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define Y_MIN_POS -130
 #define Z_MAX_POS MANUAL_Z_HOME_POS
 // Large Z_MIN_POS enables a large Z offset when using a dial test indicator to calibrate.
-#define Z_MIN_POS -50
+#define Z_MIN_POS -100
 
 #define X_MAX_LENGTH (X_MAX_POS - X_MIN_POS)
 #define Y_MAX_LENGTH (Y_MAX_POS - Y_MIN_POS)
@@ -357,7 +357,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {100, 100, 100, 450}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {100, 100, 100, 514}
 #define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 200}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,9000,9000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
