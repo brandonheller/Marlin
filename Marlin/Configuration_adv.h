@@ -213,9 +213,9 @@
 #endif //DUAL_X_CARRIAGE
     
 //homing hits the endstop, then retracts by this distance, before it tries to slowly bump again:
-#define X_HOME_RETRACT_MM 5 
-#define Y_HOME_RETRACT_MM 5 
-#define Z_HOME_RETRACT_MM 1 
+#define X_HOME_RETRACT_MM 10 
+#define Y_HOME_RETRACT_MM 10
+#define Z_HOME_RETRACT_MM 10
 //#define QUICK_HOME  //if this is defined, if both x and y are to be homed, a diagonal move will be performed initially.
 
 #define AXIS_RELATIVE_MODES {false, false, false, false}
@@ -236,7 +236,7 @@
 
 // Feedrates for manual moves along X, Y, Z, E from panel
 #ifdef ULTIPANEL
-#define MANUAL_FEEDRATE {50*60, 50*60, 4*60, 60}  // set the speeds for manual moves (mm/min)
+#define MANUAL_FEEDRATE {50*60, 50*60, 50*60, 60}  // set the speeds for manual moves (mm/min)
 #endif
 
 // minimum time in microseconds that a movement needs to take if the buffer is emptied.
