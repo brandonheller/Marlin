@@ -300,20 +300,20 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 // ENDSTOP SETTINGS:
 // Sets direction of endstops when homing; 1=MAX, -1=MIN
-#define X_HOME_DIR 1
-#define Y_HOME_DIR 1
-#define Z_HOME_DIR 1
+#define X_HOME_DIR -1
+#define Y_HOME_DIR -1
+#define Z_HOME_DIR -1
 
-#define min_software_endstops true // If true, axis won't move to coordinates less than HOME_POS.
-#define max_software_endstops true  // If true, axis won't move to coordinates greater than the defined lengths below.
+#define min_software_endstops false // If true, axis won't move to coordinates less than HOME_POS.
+#define max_software_endstops false  // If true, axis won't move to coordinates greater than the defined lengths below.
 
 // Travel limits after homing
-#define X_MAX_POS 200
-#define X_MIN_POS -200
-#define Y_MAX_POS 200
-#define Y_MIN_POS -200
-#define Z_MAX_POS 200
-#define Z_MIN_POS -200
+#define X_MAX_POS 300
+#define X_MIN_POS 0
+#define Y_MAX_POS 300
+#define Y_MIN_POS 0
+#define Z_MAX_POS 300
+#define Z_MIN_POS 0
 
 #define X_MAX_LENGTH (X_MAX_POS - X_MIN_POS)
 #define Y_MAX_LENGTH (Y_MAX_POS - Y_MIN_POS)
@@ -386,9 +386,9 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 //Manual homing switch locations:
 // For deltabots this means top and center of the cartesian print volume.
-#define MANUAL_X_HOME_POS 200
-#define MANUAL_Y_HOME_POS 200
-#define MANUAL_Z_HOME_POS 200
+#define MANUAL_X_HOME_POS 0
+#define MANUAL_Y_HOME_POS 0
+#define MANUAL_Z_HOME_POS 0
 //#define MANUAL_Z_HOME_POS 402 // For delta: Distance between nozzle and print surface after homing.
 
 //// MOVEMENT SETTINGS
@@ -397,8 +397,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {71.52, 71.52, 71.52, 100}  // default steps per unit for Ultimaker
-#define DEFAULT_MAX_FEEDRATE          {250, 250, 250, 100}    // (mm/sec)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {74.47, 74.47, 74.47, 100}  // default steps per unit for Ultimaker
+#define DEFAULT_MAX_FEEDRATE          {50, 50, 50, 100}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {400,400,400,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          500    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
